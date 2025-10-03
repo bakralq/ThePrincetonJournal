@@ -1,14 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!doctype html><html><head>
 <style>/* drawer-toggle */
 #siteMenuToggle{position:absolute;opacity:0;pointer-events:none;}
 #siteDrawer{transform:translateX(100%);opacity:1;}
 #siteDrawerBackdrop{opacity:0;}
 #siteMenuToggle:checked ~ #siteDrawer{transform:translateX(0);} 
 #siteMenuToggle:checked ~ #siteDrawer #siteDrawerBackdrop{opacity:1;}
-</style>
-<meta charset="utf-8">
+</style><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Princeton Journal</title>
 <link rel="icon" href="/assets/favicon.ico">
@@ -44,10 +41,8 @@
   function shareFB(){ const url=encodeURIComponent(window.location.href); window.open('https://www.facebook.com/sharer/sharer.php?u='+url,'_blank','noopener'); }
   function shareMail(title){ const url=encodeURIComponent(window.location.href); location.href='mailto:?subject='+encodeURIComponent(title)+'&body='+url; }
 </script>
-
-</head>
-<body class="bg-white text-gray-900">
-<header class="border-b-2 border-gray-900">
+</head><body>
+<input type="checkbox" id="siteMenuToggle" /><header class="border-b-2 border-gray-900">
   <div class="mx-auto container-narrow px-4 py-6 relative text-center">
     <a href="/index.html" class="inline-block">
       <div class="tpj-masthead text-3xl md:text-5xl leading-none">The Princeton Journal</div>
@@ -67,72 +62,7 @@
     </nav>
   </div>
 </header>
-
-<main>
-  <section class="mx-auto container-narrow px-4 py-8">
-    <article class="grid md:grid-cols-12 gap-6 items-stretch">
-      <div class="md:col-span-7">
-        <a href="/posts/top-story.html" class="block group">
-          <div class="h-64 md:h-80 bg-gray-200 rounded"></div>
-          <h1 class="tpj-masthead text-3xl md:text-4xl mt-4 group-hover:underline">Top Story: Princeton considers late‑night construction on US‑380</h1>
-          <p class="text-gray-700 mt-2">City officials weigh mitigation and safety as crews push to finish highway work. Residents urged to submit feedback before vote.</p>
-          <div class="text-sm text-gray-500 mt-2">By Bakr Al Qaraghuli, Editor • Oct 2, 2025</div>
-        </a>
-      </div>
-      <div class="md:col-span-5 grid gap-4 content-start">
-        <div class="text-xs uppercase tracking-wide text-gray-500">In this issue</div>
-        <a href="/posts/budget-2026.html" class="block border rounded p-4 hover:bg-gray-50">
-          <div class="font-semibold">Inside the FY 2026 budget: what changes and why it matters</div>
-          <div class="text-sm text-gray-500 mt-1">Princeton Governance • Oct 1, 2025</div>
-        </a>
-        <a href="/posts/op-ed-growth.html" class="block border rounded p-4 hover:bg-gray-50">
-          <div class="font-semibold">Opinion: Growth is only good if trust grows with it</div>
-          <div class="text-sm text-gray-500 mt-1">Community Voices • Sep 27, 2025</div>
-        </a>
-      </div>
-    </article>
-  </section>
-
-  <section class="mx-auto container-narrow px-4">
-    <h2 class="tpj-masthead text-2xl mb-3">Recent Articles</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-      <a href="/posts/transparency.html" class="card p-4 hover:bg-gray-50">
-        <div class="h-40 bg-gray-200 rounded"></div>
-        <div class="font-semibold mt-3">Why council transparency decides everything</div>
-        <div class="text-sm text-gray-500">Princeton Governance • Sep 25, 2025</div>
-      </a>
-      <a href="/posts/op-ed-parkland.html" class="card p-4 hover:bg-gray-50">
-        <div class="h-40 bg-gray-200 rounded"></div>
-        <div class="font-semibold mt-3">Community pitches a parkland bond</div>
-        <div class="text-sm text-gray-500">Community Voices • Sep 22, 2025</div>
-      </a>
-      <a href="/posts/water-infrastructure.html" class="card p-4 hover:bg-gray-50">
-        <div class="h-40 bg-gray-200 rounded"></div>
-        <div class="font-semibold mt-3">The invisible network under our streets</div>
-        <div class="text-sm text-gray-500">News • Sep 18, 2025</div>
-      </a>
-    </div>
-    <div class="mt-6">
-      <a href="/community-voices.html" class="text-sm underline mr-4">Community Voices →</a>
-      <a href="/princeton-governance.html" class="text-sm underline">Princeton Governance →</a>
-    </div>
-  </section>
-
-  <section class="mx-auto container-narrow px-4 py-10">
-    <h2 class="tpj-masthead text-2xl mb-1">City Council Tracker</h2>
-    <p class="text-gray-700 mb-4">Weekly agendas, votes, and plain‑English breakdowns.</p>
-    <div class="card p-4">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-        <div>
-          <div class="text-sm text-gray-500">Next meeting</div>
-          <div class="font-semibold">—</div>
-        </div>
-        <a class="px-4 py-2 border rounded hover:bg-gray-50 inline-block" href="/council-tracker.html">Open the Tracker</a>
-      </div>
-    </div>
-  </section>
-</main>
-<footer class="border-t mt-12">
+<main class='mx-auto container-narrow px-4 py-16 text-center'><h1 class='tpj-masthead text-4xl mb-2'>Something went wrong</h1><p class='text-gray-700 mb-6'>Please try again later.</p><a class='px-4 py-2 border rounded' href='/index.html'>Back to home</a></main><footer class="border-t mt-12">
   <div class="mx-auto container-narrow px-4 py-8 grid md:grid-cols-2 gap-6 text-sm text-gray-700">
     <div>
       <div>&copy; <span id="y"></span> The Princeton Journal. All rights reserved.</div>
@@ -156,7 +86,6 @@
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </footer>
 
-
 <div id="siteDrawer" class="fixed inset-0 z-50 md:hidden pointer-events-auto transition">
   <div id="siteDrawerBackdrop" class="absolute inset-0 bg-black/40 transition-opacity duration-200"></div>
   <aside class="absolute right-0 top-0 h-full w-80 max-w-[85%] bg-white transition-transform duration-200 shadow-xl">
@@ -174,5 +103,4 @@
     </nav>
   </aside>
 </div>
-</body>
-</html>
+</body></html>
