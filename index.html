@@ -16,15 +16,35 @@
   </style>
 </head>
 <body class="bg-white text-gray-900">
-<header class="border-b-2 border-gray-900 p-4 text-center">
-  <a href="/index.html" class="tpj-masthead text-3xl md:text-5xl">The Princeton Journal</a>
+
+<!-- ✅ FIXED: Drawer toggle -->
+<input type="checkbox" id="siteMenuToggle" class="hidden">
+
+<header class="border-b-2 border-gray-900">
+  <div class="mx-auto container-narrow px-4 py-6 relative text-center">
+    <a href="/index.html" class="inline-block">
+      <div class="tpj-masthead text-3xl md:text-5xl leading-none">The Princeton Journal</div>
+    </a>
+    <label for="siteMenuToggle" class="absolute right-4 top-6 p-2 border rounded md:hidden" aria-label="Open menu">
+      <div class="w-5 h-0.5 bg-black mb-1"></div>
+      <div class="w-5 h-0.5 bg-black mb-1"></div>
+      <div class="w-5 h-0.5 bg-black"></div>
+    </label>
+    <nav class="mt-4 hidden md:flex flex-wrap items-center justify-center gap-6 text-sm">
+      <a class="hover:underline" href="/index.html">Home</a>
+      <a class="hover:underline" href="/community-voices.html">Community Voices</a>
+      <a class="hover:underline" href="/princeton-governance.html">Princeton Governance</a>
+      <a class="hover:underline" href="/council-tracker.html">City Council Tracker</a>
+      <a class="hover:underline" href="/about.html">About</a>
+      <a class="hover:underline" href="/contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <main class="mx-auto max-w-5xl px-4 py-8">
-
   <!-- Top story -->
   <section>
-    <a href="/posts/council-meeting-sept22.html" class="block group">
+    <a href="/council-meeting-sept22.html" class="block group">
       <img src="/assets/council-todd.jpg" alt="Cristina Todd" class="banner rounded">
       <h1 class="tpj-masthead text-3xl md:text-4xl mt-4 group-hover:underline">What Residents Need to Know About Monday’s Council Meeting</h1>
       <p class="text-gray-700 mt-2">On September 22, the Princeton City Council will meet in executive session to discuss complaints against Councilmember Cristina Todd. What happens Monday could redefine accountability in Princeton.</p>
@@ -32,28 +52,71 @@
     </a>
   </section>
 
-  <!-- Recent articles -->
-  <section class="mt-12">
+  <!-- Secondary stories -->
+  <section class="mt-10">
     <h2 class="tpj-masthead text-2xl mb-3">Recent Articles</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <a href="/posts/transparency.html" class="card p-4 hover:bg-gray-50">
+      <a href="/fy-2026-budget.html" class="card p-4 hover:bg-gray-50">
+        <div class="h-40 bg-gray-200 rounded"></div>
+        <div class="font-semibold mt-3">Inside the FY 2026 budget: what changes and why it matters</div>
+        <div class="text-sm text-gray-500">Princeton Governance • Oct 1, 2025</div>
+      </a>
+      <a href="/op-ed-growth.html" class="card p-4 hover:bg-gray-50">
+        <div class="h-40 bg-gray-200 rounded"></div>
+        <div class="font-semibold mt-3">Opinion: Growth is only good if trust grows with it</div>
+        <div class="text-sm text-gray-500">Community Voices • Sep 27, 2025</div>
+      </a>
+      <a href="/transparency.html" class="card p-4 hover:bg-gray-50">
         <div class="h-40 bg-gray-200 rounded"></div>
         <div class="font-semibold mt-3">Why council transparency decides everything</div>
         <div class="text-sm text-gray-500">Princeton Governance • Sep 25, 2025</div>
       </a>
-      <a href="/posts/op-ed-parkland.html" class="card p-4 hover:bg-gray-50">
-        <div class="h-40 bg-gray-200 rounded"></div>
-        <div class="font-semibold mt-3">Community pitches a parkland bond</div>
-        <div class="text-sm text-gray-500">Community Voices • Sep 22, 2025</div>
-      </a>
-      <a href="/posts/collin-county-esd.html" class="card p-4 hover:bg-gray-50">
-        <div class="h-40 bg-gray-200 rounded"></div>
-        <div class="font-semibold mt-3">Collin County Emergency Services District No. 1 moves to the November ballot</div>
-        <div class="text-sm text-gray-500">News • Jul 29, 2025</div>
-      </a>
     </div>
   </section>
-
 </main>
+
+<!-- ✅ Mobile drawer menu -->
+<div id="siteDrawer" class="fixed inset-0 z-50 md:hidden pointer-events-auto transition">
+  <div id="siteDrawerBackdrop" class="absolute inset-0 bg-black/40 transition-opacity duration-200"></div>
+  <aside class="absolute right-0 top-0 h-full w-80 max-w-[85%] bg-white transition-transform duration-200 shadow-xl">
+    <div class="p-4 border-b-2 border-gray-900 flex items-center justify-between">
+      <div class="font-semibold">Menu</div>
+      <label for="siteMenuToggle" class="p-2 border rounded" aria-label="Close menu">Close</label>
+    </div>
+    <nav class="p-4 grid gap-3 text-base">
+      <a class="hover:underline" href="/index.html">Home</a>
+      <a class="hover:underline" href="/community-voices.html">Community Voices</a>
+      <a class="hover:underline" href="/princeton-governance.html">Princeton Governance</a>
+      <a class="hover:underline" href="/council-tracker.html">City Council Tracker</a>
+      <a class="hover:underline" href="/about.html">About</a>
+      <a class="hover:underline" href="/contact.html">Contact</a>
+    </nav>
+  </aside>
+</div>
+
+<footer class="border-t mt-12">
+  <div class="mx-auto container-narrow px-4 py-8 grid md:grid-cols-2 gap-6 text-sm text-gray-700">
+    <div>
+      <div>&copy; <span id="y"></span> The Princeton Journal. All rights reserved.</div>
+      <div class="mt-3">
+        <form name="subscribe" method="POST" data-netlify="true" netlify-honeypot="b" action="/thank-you.html" class="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
+          <input type="hidden" name="form-name" value="subscribe">
+          <input class="hidden" name="b">
+          <input class="border rounded px-3 py-2 min-w-0 w-full sm:flex-1" type="email" name="email" placeholder="Your email" required>
+          <div data-netlify-recaptcha="true"></div>
+          <button class="px-3 py-2 border rounded">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="flex gap-4 md:justify-end">
+      <a class="hover:underline" href="/about.html">About</a>
+      <a class="hover:underline" href="/privacy.html">Privacy</a>
+      <a class="hover:underline" href="/contact.html">Contact</a>
+      <a class="hover:underline" href="/subscribe.html">Subscribe</a>
+    </div>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</footer>
+
 </body>
 </html>
