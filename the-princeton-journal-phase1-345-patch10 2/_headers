@@ -1,0 +1,16 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer-when-downgrade
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self' 'unsafe-inline' plausible.io www.googletagmanager.com www.google-analytics.com fonts.googleapis.com fonts.gstatic.com cdn.tailwindcss.com; img-src 'self' data: https: www.google.com www.gstatic.com; script-src 'self' 'unsafe-inline' plausible.io cdn.tailwindcss.com www.googletagmanager.com www.google-analytics.com www.google.com www.gstatic.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; frame-src 'self' www.google.com www.gstatic.com;
+  font-src 'self' data: fonts.gstatic.com;
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable

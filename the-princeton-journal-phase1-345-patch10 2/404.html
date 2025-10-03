@@ -1,0 +1,106 @@
+<!doctype html><html><head>
+<style>/* drawer-toggle */
+#siteMenuToggle{position:absolute;opacity:0;pointer-events:none;}
+#siteDrawer{transform:translateX(100%);opacity:1;}
+#siteDrawerBackdrop{opacity:0;}
+#siteMenuToggle:checked ~ #siteDrawer{transform:translateX(0);} 
+#siteMenuToggle:checked ~ #siteDrawer #siteDrawerBackdrop{opacity:1;}
+</style><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Princeton Journal</title>
+<link rel="icon" href="/assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer data-domain="theprincetonjournal.com" src="https://plausible.io/js/plausible.js"></script>
+<style>
+  :root{
+    --font-mast:"Grenze Gotisch", serif;
+    --font-body:"Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  }
+  body{ font-family: var(--font-body); }
+  .tpj-masthead{ font-family: var(--font-mast); letter-spacing:.2px; }
+  .container-narrow{ max-width: 1100px; }
+  .prose p{ margin: 1em 0; line-height: 1.7; }
+  .prose h2{ font-family: var(--font-mast); font-size: 1.5rem; margin-top: 1.25rem; }
+  .prose h3{ font-weight: 600; margin-top: 1rem; }
+  .tpj-table{ width:100%; border-collapse: collapse; }
+  .tpj-table th, .tpj-table td{ border:1px solid #e5e7eb; padding:.75rem; }
+  .tpj-table thead th{ position:sticky; top:0; background:#fff; }
+  .tpj-legend span{ margin-right: 1rem; display:inline-flex; align-items:center; gap:.4rem;}
+  .dot{ display:inline-block; width:.8rem; height:.8rem; border-radius:9999px; }
+  .dot-yes{ background:#16a34a;}
+  .dot-no{ background:#dc2626;}
+  .dot-abstain{ background:#ca8a04;}
+  .dot-absent{ background:#6b7280;}
+  .card{ border:1px solid #e5e7eb; border-radius: .75rem; }
+</style>
+<script>
+  function shareX(title){ const url=encodeURIComponent(window.location.href); window.open('https://twitter.com/intent/tweet?url='+url+'&text='+encodeURIComponent(title),'_blank','noopener'); }
+  function shareFB(){ const url=encodeURIComponent(window.location.href); window.open('https://www.facebook.com/sharer/sharer.php?u='+url,'_blank','noopener'); }
+  function shareMail(title){ const url=encodeURIComponent(window.location.href); location.href='mailto:?subject='+encodeURIComponent(title)+'&body='+url; }
+</script>
+</head><body>
+<input type="checkbox" id="siteMenuToggle" /><header class="border-b-2 border-gray-900">
+  <div class="mx-auto container-narrow px-4 py-6 relative text-center">
+    <a href="/index.html" class="inline-block">
+      <div class="tpj-masthead text-3xl md:text-5xl leading-none">The Princeton Journal</div>
+    </a>
+    <label for="siteMenuToggle" class="absolute right-4 top-6 p-2 border rounded md:hidden" aria-label="Open menu">
+      <div class="w-5 h-0.5 bg-black mb-1"></div>
+      <div class="w-5 h-0.5 bg-black mb-1"></div>
+      <div class="w-5 h-0.5 bg-black"></div>
+    </label>
+    <nav class="mt-4 hidden md:flex flex-wrap items-center justify-center gap-6 text-sm">
+      <a class="hover:underline" href="/index.html">Home</a>
+      <a class="hover:underline" href="/community-voices.html">Community Voices</a>
+      <a class="hover:underline" href="/princeton-governance.html">Princeton Governance</a>
+      <a class="hover:underline" href="/council-tracker.html">City Council Tracker</a>
+      <a class="hover:underline" href="/about.html">About</a>
+      <a class="hover:underline" href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class='mx-auto container-narrow px-4 py-16 text-center'><h1 class='tpj-masthead text-4xl mb-2'>Page not found</h1><p class='text-gray-700 mb-6'>The page you're looking for doesn’t exist.</p><a class='px-4 py-2 border rounded' href='/index.html'>Back to home</a></main><footer class="border-t mt-12">
+  <div class="mx-auto container-narrow px-4 py-8 grid md:grid-cols-2 gap-6 text-sm text-gray-700">
+    <div>
+      <div>&copy; <span id="y"></span> The Princeton Journal. All rights reserved.</div>
+      <div class="mt-3">
+        <form name="subscribe" method="POST" data-netlify="true" netlify-honeypot="b" action="/thank-you.html" class="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
+  <input type="hidden" name="form-name" value="subscribe">
+  <input class="hidden" name="b">
+  <input class="border rounded px-3 py-2 min-w-0 w-full sm:flex-1" type="email" name="email" placeholder="Your email" required>
+  <div data-netlify-recaptcha="true"></div>
+  <button class="px-3 py-2 border rounded">Subscribe</button>
+</form>
+      </div>
+    </div>
+    <div class="flex gap-4 md:justify-end">
+      <a class="hover:underline" href="/about.html">About</a>
+      <a class="hover:underline" href="/privacy.html">Privacy</a>
+      <a class="hover:underline" href="/contact.html">Contact</a>
+      <a class="hover:underline" href="/subscribe.html">Subscribe</a>
+    </div>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</footer>
+
+<div id="siteDrawer" class="fixed inset-0 z-50 md:hidden pointer-events-auto transition">
+  <div id="siteDrawerBackdrop" class="absolute inset-0 bg-black/40 transition-opacity duration-200"></div>
+  <aside class="absolute right-0 top-0 h-full w-80 max-w-[85%] bg-white transition-transform duration-200 shadow-xl">
+    <div class="p-4 border-b-2 border-gray-900 flex items-center justify-between">
+      <div class="font-semibold">Menu</div>
+      <label for="siteMenuToggle" class="p-2 border rounded" aria-label="Close menu">Close</label>
+    </div>
+    <nav class="p-4 grid gap-3 text-base">
+      <a class="hover:underline" href="/index.html">Home</a>
+      <a class="hover:underline" href="/community-voices.html">Community Voices</a>
+      <a class="hover:underline" href="/princeton-governance.html">Princeton Governance</a>
+      <a class="hover:underline" href="/council-tracker.html">City Council Tracker</a>
+      <a class="hover:underline" href="/about.html">About</a>
+      <a class="hover:underline" href="/contact.html">Contact</a>
+    </nav>
+  </aside>
+</div>
+</body></html>
